@@ -1,27 +1,26 @@
 <script setup>
-import MainNavbar from './components/MainNavbar.vue';
-import HeroSection        from './components/sections/HeroSection.vue';
-import AboutSection       from './components/sections/AboutSection.vue';
-import SkillsSection      from './components/sections/SkillsSection.vue';
+import MainNavbar from "./components/MainNavbar.vue";
+import HeroSection from "./components/sections/HeroSection.vue";
+import AboutSection from "./components/sections/AboutSection.vue";
+import SkillsSection from "./components/sections/SkillsSection.vue";
 import ExperienceSection  from './components/sections/ExperienceSection.vue';
 import ProjectsSection    from './components/sections/ProjectsSection.vue';
-import ContactSection     from './components/sections/ContactSection.vue';
+import ContactSection     from './components/sections/ContactSection.vue'; 
+import MainFooter from "./components/MainFooter.vue";
+
 </script>
 
 <template>
-  <div class="font-sans text-gray-800 scroll-smooth">
-    <!-- Barre de navigation fixe -->
+  <div>
     <MainNavbar />
 
-    <!-- Sections -->
-    <HeroSection        id="hero"     />
-    <AboutSection       id="about"    class="py-20 bg-slate-50" />
-    <SkillsSection      id="skills"   class="py-20" />
-    <ExperienceSection  id="exp"      class="py-20 bg-slate-50" />
-    <ProjectsSection    id="work"     class="py-20" />
-    <ContactSection     id="contact"  class="py-20 bg-slate-50" />
+    <HeroSection id="hero" />
+    <AboutSection id="about"  class="bg-light" />
+    <SkillsSection id="skills" />
+    <ExperienceSection id="exp" class="bg-light" />
+    <ProjectsSection id="work" />
+    <ContactSection id="contact" class="bg-light" />
 
-    <!-- Pied de page -->
     <MainFooter />
   </div>
 </template>
