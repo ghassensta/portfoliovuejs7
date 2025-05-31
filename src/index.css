@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----- tes couches perso ----- */
+@layer components {
+  .navlink {
+    @apply relative font-medium text-gray-600 hover:text-accent transition-colors;
+  }
+  .navlink::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 h-0.5 w-0 bg-accent transition-all;
+  }
+  .navlink:hover::after { @apply w-full; }
+}
+
+@layer utilities {
+  .text-accent { @apply text-amber-600; }
+}
