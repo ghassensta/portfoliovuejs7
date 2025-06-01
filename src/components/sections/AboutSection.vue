@@ -3,30 +3,51 @@
   <section id="about" class="about">
     <div class="container">
       <!-- Colonne image -->
-      <div class="avatar-col">
-        <img src="" alt="Photo de Ghassen Sta" class="avatar" />
+      <!-- Colonne image -->
+      <div class="avatar-wrap">
+        <img
+          src="../../assets/img/ghassen-sta-image.jpeg"
+          alt="Photo de Ghassen Sta"
+          class="avatar"
+        />
       </div>
 
       <!-- Colonne texte -->
+      <!-- AboutSection.vue — bloc texte mis à jour -->
       <div class="text-col">
         <h2 class="heading">À&nbsp;propos</h2>
 
         <p class="intro">
-          Ingénieur backend passionné, je conçois des architectures
-          <strong>Laravel</strong>&nbsp;/&nbsp;<strong>Vue.js</strong> performantes, testées et scalables.
-          Depuis plus de&nbsp;3&nbsp;ans, j’accompagne des PME et
-          des start-ups à transformer leurs idées en produits fiables,
-          en mettant l’accent sur la maintenabilité et la qualité du
-          code.
+          Étudiant en
+          <strong>cycle ingénieur&nbsp;Software</strong> à
+          <strong>EPI International Sousse</strong> (promo 2024-2027) et
+          développeur web chez
+          <strong>TriosWeb</strong> depuis mars 2024.
+          Passionné par l’écosystème
+          <strong>Laravel</strong> &
+          <strong>Vue JS</strong>, je conçois déjà des MVP solides tout en
+          consolidant mes compétences en qualité logicielle et DevOps.
         </p>
 
         <ul class="details">
-          <li><strong>Basé à&nbsp;:</strong> Tunis, Tunisie</li>
-          <li><strong>Expérience&nbsp;:</strong> 5+&nbsp;ans en développement PHP/JS</li>
-          <li><strong>Spécialités&nbsp;:</strong> APIs REST, CI/CD, Docker, tests automatisés</li>
+          <li>
+            <strong>Basé&nbsp;à&nbsp;:</strong> Sousse, Tunisie
+          </li>
+          <li>
+            <strong>Expérience&nbsp;:</strong> 1&nbsp;an en développement&nbsp;PHP/JS
+          </li>
+          <li>
+            <strong>Spécialités&nbsp;:</strong>
+            Laravel&nbsp;Livewire / Inertia, Tailwind, APIs REST, déploiement
+            Docker, intégrations WordPress / CRM
+          </li>
         </ul>
 
-        <a href="/docs/CV-Ghassen-Sta.pdf" class="btn" target="_blank">Télécharger mon&nbsp;CV&nbsp;PDF</a>
+        <a
+          href="../../assets/docs/Cv-StaGhassen.pdf"
+          download="Ghassen_Sta_CV.pdf"
+          class="btn"
+        >Télécharger mon&nbsp;CV&nbsp;PDF</a>
       </div>
     </div>
   </section>
@@ -36,7 +57,7 @@
 /* ---------- Section ---------- */
 .about {
   padding: 80px 0;
-  background: #f8fafc;          /* gris clair */
+  background: #f8fafc; /* gris clair */
 }
 
 /* ---------- Grille ---------- */
@@ -95,7 +116,7 @@
 .btn {
   display: inline-block;
   padding: 14px 32px;
-  background: #b38b58;
+  background: #0f172ade;
   color: #fff;
   border-radius: 40px;
   text-decoration: none;
@@ -103,7 +124,7 @@
   transition: background 0.25s, transform 0.25s;
 }
 .btn:hover {
-  background: #a27942;
+  background: #0f172ade;
   transform: translateY(-2px);
 }
 
@@ -115,6 +136,47 @@
   }
   .heading {
     margin-top: 32px;
+  }
+}
+
+/* ----- Wrapper animé ----- */
+.avatar-wrap {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin-inline: auto; /* reste centré */
+  border-radius: 50%;
+}
+.avatar-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 6px; /* épaisseur du cadre */
+  background: conic-gradient(
+    #42b883 0deg 120deg,
+    #ff2d20 120deg 240deg,
+    #42b883 240deg 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; /* garde seulement l’anneau */
+  mask-composite: exclude;
+  animation: borderSpin 4s linear infinite;
+}
+
+/* ----- Image ----- */
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ----- Animation ----- */
+@keyframes borderSpin {
+  to {
+    transform: rotate(1turn);
   }
 }
 </style>

@@ -1,11 +1,77 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ghassen Sta | Web & Software Engineer</title>
+
+    <!-- SEO de base -->
+    <meta name="description" content="Portfolio de Ghassen Sta, développeur Laravel & Vue.js spécialisé back-end. Conception d’APIs robustes, CRM sur-mesure et intégrations front-end performantes." />
+    <meta name="keywords"    content="Ghassen Sta, Software Engineer, Laravel, Vue.js, PHP, Tailwind CSS, Docker, CI/CD, WordPress, Tunisie" />
+    <meta name="author"      content="Ghassen Sta" />
+    <link rel="canonical"    href="https://ghassen-sta.dev/" />
+    <meta name="robots"      content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://ghassen-sta.dev/" />
+    <meta property="og:title"       content="Ghassen Sta | Web & Software Engineer" />
+    <meta property="og:description" content="Laravel & Vue.js expert – je transforme les idées en applications rapides, sécurisées et scalables." />
+    <meta property="og:image"       content="https://ghassen-sta.dev/og-cover.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Ghassen Sta | Web & Software Engineer" />
+    <meta name="twitter:description" content="Portfolio, projets, compétences & expériences de Ghassen Sta – développeur full-stack spécialisé Laravel." />
+    <meta name="twitter:image"       content="https://ghassen-sta.dev/og-cover.jpg" />
+
+    <!-- Favicon & thème -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/img/logo-portfolio.png" />
+    <meta name="theme-color" content="#0F172A" />
+    <!-- Police Inter (optionnel) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@graph":[
+        {
+          "@type":"Person",
+          "@id":"https://ghassen-sta.dev/#me",
+          "name":"Ghassen Sta",
+          "jobTitle":"Software Engineer",
+          "url":"https://ghassen-sta.dev/",
+          "email":"mailto:staghassen1@gmail.com",
+          "telephone":"+21621922206",
+          "sameAs":[
+            "https://www.linkedin.com/in/ghassen-sta",
+            "https://github.com/ghassensta"
+          ],
+          "knowsAbout":[
+            "Laravel","Vue.js","PHP","Docker","CI/CD","Tailwind CSS",
+            "WordPress","React","MySQL","PostgreSQL"
+          ],
+          "alumniOf":[
+            { "@type":"CollegeOrUniversity","name":"EPI – International Multidisciplinary School" },
+            { "@type":"CollegeOrUniversity","name":"Higher Institute of Computer Science and Mathematics of Kairouan" }
+          ]
+        },
+        {
+          "@type":"WebSite",
+          "@id":"https://ghassen-sta.dev/#site",
+          "url":"https://ghassen-sta.dev/",
+          "name":"Ghassen Sta Portfolio",
+          "publisher":{ "@id":"https://ghassen-sta.dev/#me" },
+          "inLanguage":"fr-TN"
+        }
+      ]
+    }
+    </script>
   </head>
+
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>

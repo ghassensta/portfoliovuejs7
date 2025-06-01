@@ -13,7 +13,6 @@ import MainFooter from "./components/MainFooter.vue";
 <template>
   <div>
     <MainNavbar />
-
     <HeroSection id="hero" />
     <AboutSection id="about"  class="bg-light" />
     <SkillsSection id="skills" />

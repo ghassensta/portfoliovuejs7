@@ -1,88 +1,78 @@
 <!-- SkillsSection.vue -->
+<script setup>
+import SkillCard from '@/components/SkillBar.vue'
+
+import phpIcon            from '@/assets/icons/php.svg'
+import laravelIcon        from '@/assets/icons/laravel.svg'
+import novaIcon           from '@/assets/icons/laravelnova.svg'
+import horizonIcon        from '@/assets/icons/laravelhorizon.svg'
+import livewireIcon       from '@/assets/icons/livewire.svg'
+import inertiaIcon        from '@/assets/icons/inertia.svg'
+import dockerIcon         from '@/assets/icons/docker.svg'
+import tsnodeIcon         from '@/assets/icons/tsnode.svg'
+import vueIcon            from '@/assets/icons/vuedotjs.svg'
+import tailwindIcon       from '@/assets/icons/tailwindcss.svg'
+import bootstrapIcon      from '@/assets/icons/bootstrap.svg'
+import filamentIcon       from '@/assets/icons/filament.svg'
+import wordpressIcon      from '@/assets/icons/wordpress.svg'
+
+const skills = [
+  { label: 'PHP',             level: 5, icon: phpIcon,      color: '#777bb4' },
+  { label: 'Laravel',         level: 5, icon: laravelIcon,  color: '#FF2D20' },
+  { label: 'Laravel Nova',    level: 4, icon: novaIcon,     color: '#3d4852' },
+  { label: 'Laravel Horizon', level: 4, icon: horizonIcon,  color: '#FF4E36' },
+  { label: 'Livewire',        level: 4, icon: livewireIcon, color: '#4EBFED' },
+  { label: 'Inertia.js',      level: 4, icon: inertiaIcon,  color: '#8030c0' },
+  { label: 'Docker',          level: 4, icon: dockerIcon,   color: '#2496ed' },
+  { label: 'TypeScript',      level: 3, icon: tsnodeIcon,   color: '#3178C6' },
+  { label: 'Vue.js',          level: 4, icon: vueIcon,      color: '#42b883' },
+  { label: 'Tailwind CSS',    level: 4, icon: tailwindIcon, color: '#38bdf8' },
+  { label: 'Bootstrap',       level: 3, icon: bootstrapIcon,color: '#7952b3' },
+  { label: 'Filament PHP',    level: 3, icon: filamentIcon, color: '#f46b45' },
+  { label: 'WordPress',       level: 3, icon: wordpressIcon,color: '#21759b' },
+]
+</script>
+
 <template>
   <section id="skills" class="skills">
     <div class="container">
       <h2 class="heading">Compétences</h2>
 
       <div class="grid">
-        <SkillBar label="PHP / Laravel"  :level="90" />
-        <SkillBar label="Node.js"        :level="75" />
-        <SkillBar label="Docker & CI/CD" :level="80" />
-        <SkillBar label="PostgreSQL"     :level="85" />
-        <SkillBar label="Vue.js / React" :level="70" />
-        <SkillBar label="AWS"            :level="60" />
+        <SkillCard
+          v-for="s in skills"
+          :key="s.label"
+          v-bind="s"        
+        />
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-/* ────── Sous-composant barre ────── */
-defineProps([]); // (pas de props pour la section)
-
-// Composant enfant inline :
-const SkillBar = {
-  props: { label: String, level: Number }, // level = 0-100
-  template: `
-    <div class="skill">
-      <div class="skill-header">
-        <span>{{ label }}</span>
-        <span>{{ level }}%</span>
-      </div>
-      <div class="bar-bg">
-        <div class="bar-fill" :style="{ width: level + '%' }"></div>
-      </div>
-    </div>
-  `,
-};
-</script>
-
 <style scoped>
-/* ---------- Section ---------- */
-.skills{
-  padding:80px 0;
-}
-.container{
-  max-width:1000px;
-  margin:0 auto;
-  padding:0 24px;
+.skills    { padding: 80px 0 }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px }
+.heading   { font-size: 2rem; font-weight: 700; margin-bottom: 48px; color: #0f172a; text-align: center }
+
+.grid {
+  display: grid;
+  gap: 24px;                            /* écart un peu plus serré */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  align-items: start;                   /* aligne proprement les cartes */
 }
 
-/* ---------- Titre ---------- */
-.heading{
-  font-size:2rem;
-  font-weight:700;
-  margin-bottom:48px;
-  color:#0f172a;
-  text-align:center;
+/* ≥ 768 px : exactement 3 colonnes */
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* ---------- Grille ---------- */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:32px;
-}
-@media(max-width:799px){
-  .grid{ grid-template-columns:1fr; }
+/* < 600 px : 2 colonnes  */
+@media (max-width: 599px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ---------- Barres ---------- */
-.skill-header{
-  display:flex; justify-content:space-between;
-  font-weight:600; color:#0f172a;
-  margin-bottom:6px;
-}
-.bar-bg{
-  height:10px;
-  background:#e5e7eb;            /* gris clair */
-  border-radius:5px;
-  overflow:hidden;
-}
-.bar-fill{
-  height:100%;
-  background:#b38b58;            /* accent */
-  width:0;                       /* animé ci-dessous */
-  transition:width 1s ease;
+/* < 400 px : 1 colonne  */
+@media (max-width: 399px) {
+  .grid { grid-template-columns: 1fr; }
 }
 </style>

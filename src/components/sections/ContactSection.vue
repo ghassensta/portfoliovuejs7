@@ -95,7 +95,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #b38b58;
+  border-color: #0f172ade;
   box-shadow: 0 0 0 2px rgba(179, 139, 88, 0.2);
 }
 
@@ -103,7 +103,7 @@ textarea:focus {
 .btn {
   align-self: flex-start;
   padding: 14px 32px;
-  background: #b38b58;
+  background: #0f172ade;
   color: #fff;
   border: none;
   border-radius: 40px;
@@ -127,7 +127,7 @@ textarea:focus {
   color: #444;
 }
 .info a {
-  color: #b38b58;
+  color: #0f172ade;
   text-decoration: none;
 }
 .info a:hover {

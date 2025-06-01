@@ -88,12 +88,12 @@ h4{
 .links li{margin-bottom:8px;}
 .links a{color:#e5e7eb; text-decoration:none;}
 .links a:hover{text-decoration:underline;}
-.contact a{color:#b38b58; text-decoration:none;}
+.contact a{color:#0f172ade; text-decoration:none;}
 .contact a:hover{text-decoration:underline;}
 .social{list-style:none; padding:0; margin:16px 0 0;}
 .social li{display:inline-block; margin-right:12px;}
 .social a{color:#e5e7eb; text-decoration:none;}
-.social a:hover{color:#b38b58;}
+.social a:hover{color:#0f172ade;}
 /* -------- Ligne bas de page -------- */
 .bottom{
   background:#0d1320;

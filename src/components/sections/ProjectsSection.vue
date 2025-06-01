@@ -106,7 +106,7 @@ const projects = [
   margin:0 6px;
   border-radius:32px;
   font-weight:600;
-  background:#b38b58; color:#fff; text-decoration:none;
+  background:#0f172ade; color:#fff; text-decoration:none;
   transition:background .25s;
 }
 .btn:hover{ background:#a27942; }
