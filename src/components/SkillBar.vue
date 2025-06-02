@@ -1,16 +1,9 @@
-<!-- components/SkillCard.vue -->
 <script setup>
-import { computed } from 'vue'
-
 const props = defineProps({
-  label:  String,
-  icon:   String,
-  level:  Number,   // 1 – 5
-  color:  String,
-})
-
-// tableau d’étoiles remplies / vides
-const stars = computed(() => Array.from({ length: 5 }, (_, i) => i < props.level))
+  label: String,
+  icon: String,
+  color: String,
+});
 </script>
 
 <template>
@@ -20,19 +13,6 @@ const stars = computed(() => Array.from({ length: 5 }, (_, i) => i < props.level
     </div>
 
     <h3 class="label">{{ label }}</h3>
-
-    <div class="stars">
-      <svg
-        v-for="(filled, i) in stars"
-        :key="i"
-        viewBox="0 0 20 20"
-        class="star"
-        :fill="filled ? color : 'none'"
-        :stroke="color"
-      >
-        <polygon points="10,1 12.9,7.1 19.5,7.3 14,11.9 15.8,18.4 10,14.8 4.2,18.4 6,11.9 0.5,7.3 7.1,7.1" />
-      </svg>
-    </div>
   </div>
 </template>
 
@@ -56,8 +36,5 @@ const stars = computed(() => Array.from({ length: 5 }, (_, i) => i < props.level
 }
 .icon { width: 36px; height: 36px }
 
-.label { margin: 0 0 12px; font-weight: 600; color: #0f172a }
-
-.stars { display: flex; justify-content: center; gap: 2px }
-.star { width: 18px; height: 18px }
+.label { margin: 0; font-weight: 600; color: #0f172a }
 </style>

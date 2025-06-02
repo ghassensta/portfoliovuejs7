@@ -36,8 +36,8 @@ function submit (e) {
       <!-- ========== Infos / réseaux ========== -->
       <div class="info">
         <h3>Infos</h3>
-        <p><strong>Basé :</strong> Tunis, Tunisie</p>
-        <p><strong>E-mail :</strong> <a href="mailto:contact@fiollahome.com">contact@fiollahome.com</a></p>
+        <p><strong>Basé :</strong> Sousse, Tunisie</p>
+        <p><strong>E-mail :</strong> <a href="mailto:contact@fiollahome.com">staghassen1@gmail.com</a></p>
 
         <h4>Réseaux sociaux</h4>
         <ul class="social">

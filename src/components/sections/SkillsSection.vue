@@ -17,19 +17,19 @@ import filamentIcon       from '@/assets/icons/filament.svg'
 import wordpressIcon      from '@/assets/icons/wordpress.svg'
 
 const skills = [
-  { label: 'PHP',             level: 5, icon: phpIcon,      color: '#777bb4' },
-  { label: 'Laravel',         level: 5, icon: laravelIcon,  color: '#FF2D20' },
-  { label: 'Laravel Nova',    level: 4, icon: novaIcon,     color: '#3d4852' },
-  { label: 'Laravel Horizon', level: 4, icon: horizonIcon,  color: '#FF4E36' },
-  { label: 'Livewire',        level: 4, icon: livewireIcon, color: '#4EBFED' },
-  { label: 'Inertia.js',      level: 4, icon: inertiaIcon,  color: '#8030c0' },
-  { label: 'Docker',          level: 4, icon: dockerIcon,   color: '#2496ed' },
-  { label: 'TypeScript',      level: 3, icon: tsnodeIcon,   color: '#3178C6' },
-  { label: 'Vue.js',          level: 4, icon: vueIcon,      color: '#42b883' },
-  { label: 'Tailwind CSS',    level: 4, icon: tailwindIcon, color: '#38bdf8' },
-  { label: 'Bootstrap',       level: 3, icon: bootstrapIcon,color: '#7952b3' },
-  { label: 'Filament PHP',    level: 3, icon: filamentIcon, color: '#f46b45' },
-  { label: 'WordPress',       level: 3, icon: wordpressIcon,color: '#21759b' },
+  { label: 'PHP',              icon: phpIcon,      color: '#777bb4' },
+  { label: 'Laravel',          icon: laravelIcon,  color: '#FF2D20' },
+  { label: 'Laravel Nova',     icon: novaIcon,     color: '#3d4852' },
+  { label: 'Laravel Horizon',  icon: horizonIcon,  color: '#FF4E36' },
+  { label: 'Livewire',         icon: livewireIcon, color: '#4EBFED' },
+  { label: 'Inertia.js',       icon: inertiaIcon,  color: '#8030c0' },
+  { label: 'Docker',           icon: dockerIcon,   color: '#2496ed' },
+  { label: 'TypeScript',       icon: tsnodeIcon,   color: '#3178C6' },
+  { label: 'Vue.js',           icon: vueIcon,      color: '#42b883' },
+  { label: 'Tailwind CSS',     icon: tailwindIcon, color: '#38bdf8' },
+  { label: 'Bootstrap',        icon: bootstrapIcon,color: '#7952b3' },
+  { label: 'Filament PHP',     icon: filamentIcon, color: '#f46b45' },
+  { label: 'WordPress',        icon: wordpressIcon,color: '#21759b' },
 ]
 </script>
 
